@@ -62,4 +62,3 @@
 
 // if(num > 0) Print(RandArray(num));
 // else Console.WriteLine("Не может быть 0 элементов, попробуйте снова");
-

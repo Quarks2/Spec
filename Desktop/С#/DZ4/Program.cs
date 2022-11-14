@@ -1,51 +1,65 @@
 ﻿//   Напишите программу, которая принимает на вход два числа (A и B) и возводит число A в натуральную степень B 
 
-// Console.WriteLine("Введите число а: ");
-// int firstnumber = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите число b: ");
-// int secondnumber = Convert.ToInt32(Console.ReadLine());
-
-// int count = firstnumber;
-// int degree = 1;
-// while (degree < secondnumber)
+// int Stepen(int firstnumber, int secondnumber)
 // {
-//     count = count * firstnumber;
-//     degree++;
+//     int result = firstnumber;
+//     for (int pow = 1; pow < secondnumber; pow++)
+//         result *= firstnumber;
+//     return result;
 // }
-// Console.WriteLine($"Число А в степени В = {count}");
+// Console.Write("Введите число а: ");
+// int firstnumber = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число в: ");
+// int secondnumber = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Число А в степени В = {Stepen(firstnumber, secondnumber)}");
 
 
 
 //  Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-
-// Console.WriteLine("Введите число а: ");
-// int firstnumber = Convert.ToInt32(Console.ReadLine());
-
-// int sum = 0;
-// int temp = firstnumber;
-
-// while ( temp > 0)
-// {   
-//     int check = temp % 10;
-//     temp = temp / 10;
-//     sum = sum + check;  
+// int SumOfNumbers(int number)
+// {
+//     int result = 0;
+//     int temp = number;
+//     while (temp != 0)
+//     {
+//         result += temp % 10;
+//         temp /= 10;
+//     }
+//     return result;
 // }
-// Console.WriteLine($"Сумма цифр в числе = {sum}");
+// Console.WriteLine("Введите число а: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Сумма цифр в числе = {SumOfNumbers(number)}");
 
 
 // Напишите программу, которая создает массив заданного пользователем размера, заполняет массив элементами от 1 до 99 и выводит их на экран.
 
 
+// int[] RandArray(int n)
+// {
+//     int[] arr = new int[n];
+//     for (int index = 0; index < n; index++)
+//     {
+//         arr[index] = new Random().Next(1,100);
+//     }
+//     return arr;
+// }
+
+// void Print(int[] arr)
+// {
+//     Console.Write("[");
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write($"{arr[i]},");
+//     }
+//     Console.Write("\b]");
+//     Console.WriteLine();
+// }
+
 // Console.Write("Введите количество элементов массива:\t");
-// int elementsCount = Convert.ToInt32(Console.ReadLine());
-// int [] myArray = new int [elementsCount];
-// Random rand = new Random();
-// Console.Write("[");
-// for(int i =0;i<myArray.Length;i++)
-//    {
-//     myArray[i] = rand.Next(0,99);
-//     Console.Write($"{myArray[i]},");
-//    }
-// Console.Write("\b]");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// if(num > 0) Print(RandArray(num));
+// else Console.WriteLine("Не может быть 0 элементов, попробуйте снова");
 
